@@ -1,0 +1,65 @@
+* Se colocarmos um novo <p> na main e quisermos caracterizalo no css com :
+main p {
+}
+
+* Teremos um problemão isso porque todos os <p> dentro de main até mesmo os dentro de <section> e ai por diante serão alterados com as caracteristicas postas acima 
+
+* Para fazermos com que as alteração sejam feitas exclusivamente para os <p> diretamente dentro da main, isto é, filhos diretos da main devemos usar a seguinte sintaxe:
+main > p{
+}
+
+* Temos um outro seletor que funciona da seguinte forma: selecionar o primeiro parágrafo após um imagem
+img + p {
+}
+
+* Da mesma forma podemos selecionar todos os paragrafos após uma imagem com:
+img ~ p {
+}
+
+* Podemos ainda fazer um seleção por exclusão por exemplo selecionar todos que não tenham um ID x, no nosso texto o ID missao:
+.principal p:not(#missao){
+}
+
+* Introdução da ferramente calc()
+
+* Como usar as medidas proporcionais para deixar um elemento de 100% de largura com o equivalente a um terço do elemento pai, menos 10px?
+width: calc( (100% / 3) - 10px )      OU	width: calc( 33% - 10px )
+
+* Nesta aula, aprendemos:
+    Seletores avançados CSS
+        Seletor >, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main:
+        	main > p {
+        	}
+        Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
+        	img + p {
+        	}
+        Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
+        	img ~ p {
+        	}
+        Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+        	main p:not(#missao) {
+        	}
+    Como fazer contas com CSS, com a propriedade calc
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+* Para agora vamos atualizar nossa pagina index.html, vamos começar por adicionar o reset.css e o style.css  e veremos que página fica uma bagunça:
+	<head>
+		<meta charset="UTF-8">
+		<title>Barbearia Alura</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+* Então devemos substituir o cabeçalho presente em index.html pelo cabeçalho que usamos em contatos.html e produtos.html
+
+* Percebemos tambem que a página index.html não possui um <footer>, vamos importar tambem oque utilizamos nas páginas anteriores, botando ele ao final do body
+
+* Outra coisa que deve melhorar é a semântica, em index.html não temos um <main>, vamos adiciona-lo tambem
+
+* Além disso podemos trocar o primeiro <div> por um <section> pois o conteudo é completo em si. E quando paramos para observar o segundo div tambem.
+
+* Para um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido, usamos uma <section>.
+
+* Vamos agora estilizar a pagina, começando pelo banner e sem esquecer de adicionar as classes no html:
+.banner {
+	width: 100%;
+}
+
+* E então o CSS para o corpo principal:
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+}
+.principal p {
+	margin: 0 0 1em;
+}
+.principal strong {
+	font-weight: bold;
+}
+.principal em {
+	font-style: italic;
+}
+
+* A parte de beneficios que queremos tem um titulo com as mesmas propriedades que o titulo principal então colocamos a classe de titulo-principal nela 
+
+* E criamos tambem uma classe para a imgem de beneficios:
+.imagembeneficios{
+	width: 60%;
+}
+
+* Agora precisamos inserir no html a imagem do utensilios, vamos bota-la logo abaixo do titulo de Sobre:
+<img class="utensilios" src="utensilios.jpg" alt="Utensílios de um barbeiro.">
+
+* Agora faremos a sua classe no CSS:
+.utensilios {
+	width: 120px;
+	float: left;  ----> float é meio que um forma de display que permite que o resto da pagina ocupe sua linha mas sem atravessa-lo 
+	margin: 0 20px 20px 0;   -----> cima direita baixo esquerda 
+} 
+
+* Um detalhe do float é que afeta a pagina inteira e nosso titulo de beneficio acabou subindo, para arrumar devemos adicioar o seguinte atribuito a classe titulo-principal:
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;  ------> esse atributo faz com que "limpe" os efeitos do float   /   limpe os efeitos as esquerda
+}
+
+* Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele
+
+* Nesta aula, aprendemos:
+    A ajustar a página principal para utilizar os mesmos padrões da página de produtos
+    Medidas proporcionais com CSS
+    Como funciona a flutuação dos elementos e como modificá-la, com a propriedade float do CSS
+    Como limpar o float, com a propriedade clear do CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Um balanço é a melhor alternativa para o nome de um classe. Nem tão específica, para poder repetir as classes, e nem tão genérica, para poder não precisar combinar classes.
+
+*
